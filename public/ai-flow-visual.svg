@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#93c5fd" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.9"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="none"/>
+  <!-- Network lines -->
+  <g stroke="url(#g1)" stroke-opacity="0.5" stroke-width="2">
+    <path d="M200 700 C 400 500, 600 500, 800 650" fill="none"/>
+    <path d="M300 500 C 600 350, 900 350, 1200 520" fill="none"/>
+    <path d="M500 720 C 750 600, 1000 620, 1300 700" fill="none"/>
+    <path d="M250 620 C 550 520, 850 520, 1150 610" fill="none"/>
+  </g>
+  <!-- Nodes -->
+  <g filter="url(#glow)">
+    <circle cx="250" cy="620" r="10" fill="url(#node)"/>
+    <circle cx="500" cy="720" r="12" fill="url(#node)"/>
+    <circle cx="800" cy="650" r="14" fill="url(#node)"/>
+    <circle cx="1150" cy="610" r="10" fill="url(#node)"/>
+    <circle cx="1200" cy="520" r="12" fill="url(#node)"/>
+    <circle cx="300" cy="500" r="10" fill="url(#node)"/>
+  </g>
+  <!-- Panels representing automated steps -->
+  <g>
+    <rect x="220" y="380" rx="16" ry="16" width="220" height="100" fill="rgba(99,102,241,0.15)" stroke="rgba(147,51,234,0.35)"/>
+    <rect x="690" y="320" rx="16" ry="16" width="240" height="110" fill="rgba(59,130,246,0.15)" stroke="rgba(99,102,241,0.35)"/>
+    <rect x="1100" y="380" rx="16" ry="16" width="240" height="110" fill="rgba(34,211,238,0.12)" stroke="rgba(99,102,241,0.35)"/>
+    <text x="240" y="438" fill="#e5e7eb" font-size="18" font-family="Inter, ui-sans-serif">Trigger: New lead</text>
+    <text x="710" y="378" fill="#e5e7eb" font-size="18" font-family="Inter, ui-sans-serif">Enrich + Score</text>
+    <text x="1120" y="438" fill="#e5e7eb" font-size="18" font-family="Inter, ui-sans-serif">Route to Owner</text>
+  </g>
+</svg>
