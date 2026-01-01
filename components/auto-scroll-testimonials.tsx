@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, PanInfo } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 interface AutoScrollTestimonialsProps {
@@ -22,7 +22,7 @@ export default function AutoScrollTestimonials({ children, className = "" }: Aut
       controls.start({
         x: [0, -100],
         transition: {
-          duration: 20,
+          duration: 15,
           ease: "linear",
           repeat: Infinity,
           repeatType: "loop"
@@ -33,14 +33,14 @@ export default function AutoScrollTestimonials({ children, className = "" }: Aut
     startAutoScroll();
   }, [controls, isDragging]);
 
-  const handleDragStart = (event: any, info: any) => {
+  const handleDragStart = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     setIsDragging(true);
     setDragStart(info.point.x);
     setScrollStart(containerRef.current?.scrollLeft || 0);
     controls.stop();
   };
 
-  const handleDrag = (event: any, info: any) => {
+  const handleDrag = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (!containerRef.current) return;
     const deltaX = info.point.x - dragStart;
     containerRef.current.scrollLeft = scrollStart - deltaX;
@@ -54,7 +54,7 @@ export default function AutoScrollTestimonials({ children, className = "" }: Aut
         controls.start({
           x: [0, -100],
           transition: {
-            duration: 20,
+            duration: 15,
             ease: "linear",
             repeat: Infinity,
             repeatType: "loop"
@@ -65,18 +65,19 @@ export default function AutoScrollTestimonials({ children, className = "" }: Aut
   };
 
   return (
-    <motion.div
-      ref={containerRef}
-      className={className}
-      drag="x"
-      dragConstraints={{ left: -200, right: 0 }}
-      onDragStart={handleDragStart}
-      onDrag={handleDrag}
-      onDragEnd={handleDragEnd}
-      animate={controls}
-      style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-    >
-      {children}
-    </motion.div>
+    <div className={className}>
+      <motion.div
+        ref={containerRef}
+        drag="x"
+        dragConstraints={{ left: -200, right: 0 }}
+        onDragStart={handleDragStart}
+        onDrag={handleDrag}
+        onDragEnd={handleDragEnd}
+        animate={controls}
+        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 }

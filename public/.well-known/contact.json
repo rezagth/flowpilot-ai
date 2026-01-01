@@ -1,0 +1,15 @@
+{
+  "contactPoint": {
+    "@context": "https://schema.org",
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "telephone": "+33-1-XX-XX-XX",
+    "email": "contact@flowpilot.ai",
+    "areaServed": "FR"
+  },
+  "securityTxt": {
+    "contact": "mailto:security@flowpilot.ai",
+    "expires": "2025-12-31T23:59:59Z",
+    "security": "https://flowpilot.ai/.well-known/security.txt"
+  }
+}

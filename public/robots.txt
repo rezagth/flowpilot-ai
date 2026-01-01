@@ -1,0 +1,58 @@
+# FlowPilot AI - Robots.txt for SEO Geolocation Optimization
+# Comprehensive SEO configuration for France and international markets
+
+# Default rules for all crawlers
+User-agent: *
+Allow: /
+Allow: /fr
+Allow: /en
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /_next/
+Disallow: /node_modules/
+Crawl-delay: 1
+Request-rate: 30/60
+
+# Google Bot - Aggressive crawling allowed
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+# Google Bot Mobile
+User-agent: Googlebot-Mobile
+Allow: /
+Crawl-delay: 0.5
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Disallow bad crawlers
+User-agent: MJ12bot
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://flowpilot.ai/sitemap.xml
+
+# Geolocation and language preferences
+# France (Primary market)
+Host: flowpilot.ai
+
+# Preferred domain for internationalization
+Sitemap: https://flowpilot.ai/sitemap.xml
+Sitemap: https://flowpilot.ai/fr/sitemap.xml
+Sitemap: https://flowpilot.ai/en/sitemap.xml

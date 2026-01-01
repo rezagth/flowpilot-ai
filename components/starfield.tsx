@@ -44,18 +44,25 @@ export default function Starfield() {
       const H = canvas.height;
       ctx.clearRect(0, 0, W, H);
 
-      const speed = 0.0025;
+      const speed = 0.004;
       for (const star of stars) {
         star.z -= speed * star.s;
         if (star.z <= 0) star.z = 1;
         const sx = (star.x / star.z) * (W * 0.35) + W / 2;
         const sy = (star.y / star.z) * (H * 0.35) + H / 2;
-        const r = Math.max(0.5, (1 - star.z) * 2.2) * DPR;
-        const hue = 225 + Math.sin((frame + star.x * 100) * 0.002) * 15;
-        ctx.fillStyle = `hsla(${hue}, 90%, ${60 - star.z * 40}%, ${0.75 - star.z * 0.6})`;
+        const r = Math.max(0.6, (1 - star.z) * 2.8) * DPR;
+        const hue = 220 + Math.sin((frame + star.x * 100) * 0.003) * 20;
+        const brightness = 65 - star.z * 45;
+        const alpha = 0.85 - star.z * 0.7;
+        
+        // Glow effect
+        ctx.shadowBlur = r * 3;
+        ctx.shadowColor = `hsla(${hue}, 90%, ${brightness}%, ${alpha * 0.5})`;
+        ctx.fillStyle = `hsla(${hue}, 90%, ${brightness}%, ${alpha})`;
         ctx.beginPath();
         ctx.arc(sx, sy, r, 0, Math.PI * 2);
         ctx.fill();
+        ctx.shadowBlur = 0;
       }
 
       raf = requestAnimationFrame(tick);
@@ -82,7 +89,7 @@ export default function Starfield() {
   return (
     <canvas
       ref={ref}
-      className="pointer-events-none fixed inset-0 -z-10 opacity-60"
+      className="pointer-events-none fixed inset-0 -z-10 opacity-70"
       aria-hidden
     />
   );

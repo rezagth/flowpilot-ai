@@ -50,8 +50,8 @@ export default function AutomationDemo() {
                   <path d="M24 0H0V24" fill="none" stroke="rgba(255,255,255,0.06)"/>
                 </pattern>
                 <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="rgba(99,102,241,.7)" />
-                  <stop offset="100%" stop-color="rgba(34,211,238,.6)" />
+                  <stop offset="0%" stopColor="rgba(99,102,241,.7)" />
+                  <stop offset="100%" stopColor="rgba(34,211,238,.6)" />
                 </linearGradient>
               </defs>
               <rect width="100%" height="100%" fill="url(#p)" />
