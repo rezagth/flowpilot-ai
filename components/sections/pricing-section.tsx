@@ -128,16 +128,19 @@ export default function PricingSection() {
           transform: scale(1.2) rotate(10deg);
           color: #4ade80;
         }
+
+        @keyframes fadeInUpSlow {
+          0% { opacity: 0; transform: translateY(40px); filter: blur(4px); }
+          100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
       `}</style>
 
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-3" style={{
           animation: "fadeInUpSlow 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both",
-          "@keyframes fadeInUpSlow": "0% { opacity: 0; transform: translateY(40px); filter: blur(4px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0); }"
         }}>Nos Offres</h2>
         <p className="text-white/70 max-w-2xl mx-auto text-lg" style={{
           animation: "fadeInUpSlow 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both",
-          "@keyframes fadeInUpSlow": "0% { opacity: 0; transform: translateY(40px); filter: blur(4px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0); }"
         }}>Des formules flexibles adaptées à la taille de votre entreprise et à vos besoins.</p>
       </div>
 

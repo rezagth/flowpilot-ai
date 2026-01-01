@@ -18,6 +18,11 @@ const cardAnimationStyle = `
     }
   }
 
+  @keyframes fadeInUpSlow {
+    0% { opacity: 0; transform: translateY(40px); filter: blur(4px); }
+    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+  }
+
   .service-card {
     animation: fadeInUpCard 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
@@ -132,17 +137,14 @@ export default function ServicesSection() {
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-3" style={{
           animation: "fadeInUpSlow 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both",
-          "@keyframes fadeInUpSlow": "0% { opacity: 0; transform: translateY(40px); filter: blur(4px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0); }"
         }}>Nos Services sur Mesure</h2>
         <p className="text-white/70 max-w-3xl mx-auto text-lg" style={{
           animation: "fadeInUpSlow 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both",
-          "@keyframes fadeInUpSlow": "0% { opacity: 0; transform: translateY(40px); filter: blur(4px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0); }"
         }}>
           Solutions d&apos;automatisation intelligente adaptées à vos besoins spécifiques. Nous analysons vos processus et créons des outils qui s&apos;intègrent parfaitement à votre façon de travailler.
         </p>
         <div className="flex items-center justify-center gap-4 mt-6 flex-wrap" style={{
           animation: "fadeInUpSlow 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s both",
-          "@keyframes fadeInUpSlow": "0% { opacity: 0; transform: translateY(40px); filter: blur(4px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0); }"
         }}>
           <span className="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs text-white/70 hover:border-indigo-400/50 hover:bg-indigo-500/10 transition-all duration-300">👥 Accompagnement personnalisé</span>
           <span className="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs text-white/70 hover:border-indigo-400/50 hover:bg-indigo-500/10 transition-all duration-300">⚙️ Sur mesure</span>
@@ -188,7 +190,6 @@ export default function ServicesSection() {
         </div>
         <div className="mt-8 flex flex-col sm:flex-row gap-3" style={{
           animation: "fadeInUpSlow 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s both",
-          "@keyframes fadeInUpSlow": "0% { opacity: 0; transform: translateY(40px); filter: blur(4px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0); }"
         }}>
           <Link href="#cta" className="btn-primary">
             Demander un audit gratuit
