@@ -29,10 +29,10 @@ export default function CTASection() {
         }
 
         .cta-card {
-          animation: fadeInUpSlow 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+          animation: fadeInUpSlow 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
           position: relative;
           overflow: hidden;
-          transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+          transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .cta-card::before {
@@ -42,8 +42,8 @@ export default function CTASection() {
           left: -100%;
           width: 100%;
           height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
-          transition: left 0.6s;
+          background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.08), transparent);
+          transition: left 0.5s;
         }
 
         .cta-card:hover::before {

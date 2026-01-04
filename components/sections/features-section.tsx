@@ -30,22 +30,22 @@ export default function FeaturesSection() {
         }
 
         .feature-card {
-          animation: fadeInUpCard 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+          animation: fadeInUpCard 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
           opacity: 0;
           position: relative;
           overflow: hidden;
-          transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+          transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .feature-card:nth-child(1) { animation-delay: 0s; }
-        .feature-card:nth-child(2) { animation-delay: 0.1s; }
-        .feature-card:nth-child(3) { animation-delay: 0.2s; }
-        .feature-card:nth-child(4) { animation-delay: 0.3s; }
-        .feature-card:nth-child(5) { animation-delay: 0.4s; }
-        .feature-card:nth-child(6) { animation-delay: 0.5s; }
-        .feature-card:nth-child(7) { animation-delay: 0.6s; }
-        .feature-card:nth-child(8) { animation-delay: 0.7s; }
-        .feature-card:nth-child(9) { animation-delay: 0.8s; }
+        .feature-card:nth-child(2) { animation-delay: 0.08s; }
+        .feature-card:nth-child(3) { animation-delay: 0.16s; }
+        .feature-card:nth-child(4) { animation-delay: 0.24s; }
+        .feature-card:nth-child(5) { animation-delay: 0.32s; }
+        .feature-card:nth-child(6) { animation-delay: 0.4s; }
+        .feature-card:nth-child(7) { animation-delay: 0.48s; }
+        .feature-card:nth-child(8) { animation-delay: 0.56s; }
+        .feature-card:nth-child(9) { animation-delay: 0.64s; }
 
         .feature-card::before {
           content: '';
@@ -54,8 +54,8 @@ export default function FeaturesSection() {
           left: -100%;
           width: 100%;
           height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
-          transition: left 0.6s;
+          background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.08), transparent);
+          transition: left 0.5s;
         }
 
         .feature-card:hover::before {
@@ -63,18 +63,18 @@ export default function FeaturesSection() {
         }
 
         .feature-card:hover {
-          transform: translateY(-8px);
-          border-color: rgba(99, 102, 241, 0.8) !important;
-          box-shadow: 0 0 50px rgba(99, 102, 241, 0.4), inset 0 0 20px rgba(99, 102, 241, 0.05) !important;
+          transform: translateY(-6px);
+          border-color: rgba(59, 130, 246, 0.6) !important;
+          box-shadow: 0 0 35px rgba(59, 130, 246, 0.3), inset 0 0 15px rgba(59, 130, 246, 0.03) !important;
         }
 
         .feature-badge {
-          transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+          transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .feature-card:hover .feature-badge {
           transform: scale(1.05);
-          box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+          box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
         }
 
         @keyframes fadeInUpSlow {

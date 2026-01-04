@@ -8,11 +8,14 @@ export default function Footer() {
       <div className="grid md:grid-cols-5 gap-8 mb-10">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2.5 mb-4">
-            <div className="size-8 rounded-lg bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600" />
-            <span className="font-bold text-white text-lg">FlowPilot AI</span>
+            <div className="size-8 rounded-lg bg-gradient-to-br from-slate-900 via-blue-900 to-blue-700 border border-blue-500/20" />
+            <div className="flex flex-col">
+              <span className="font-bold text-white text-base leading-none">Elyron</span>
+              <span className="font-semibold text-blue-400 text-xs leading-none">Labs</span>
+            </div>
           </div>
           <p className="text-white/60 text-sm leading-relaxed max-w-sm">
-            Agence d&apos;automatisation et d&apos;intelligence artificielle spécialisée pour les PME. Gagnez du temps, réduisez les coûts, concentrez-vous sur l&apos;essentiel.
+            Solutions d&apos;IA avancée et automatisation intelligente. Transformez vos processus métier avec des technologies de pointe et expertise en machine learning.
           </p>
           <div className="flex items-center gap-3 mt-6">
             <span className="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs text-white/70">🇫🇷 Entreprise française</span>
@@ -79,7 +82,7 @@ export default function Footer() {
       </div>
 
       <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="text-white/50 text-sm">© {new Date().getFullYear()} FlowPilot AI. All rights reserved.</div>
+        <div className="text-white/50 text-sm">© {new Date().getFullYear()} Elyron Labs. All rights reserved.</div>
         <div className="flex items-center gap-5">
           <Link href="#" className="text-white/50 hover:text-white transition">
             <svg className="size-5" fill="currentColor" viewBox="0 0 24 24">

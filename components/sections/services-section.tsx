@@ -28,19 +28,19 @@ const cardAnimationStyle = `
   }
 
   .service-card:nth-child(1) { animation-delay: 0s; }
-  .service-card:nth-child(2) { animation-delay: 0.1s; }
-  .service-card:nth-child(3) { animation-delay: 0.2s; }
-  .service-card:nth-child(4) { animation-delay: 0.3s; }
-  .service-card:nth-child(5) { animation-delay: 0.4s; }
-  .service-card:nth-child(6) { animation-delay: 0.5s; }
-  .service-card:nth-child(7) { animation-delay: 0.6s; }
-  .service-card:nth-child(8) { animation-delay: 0.7s; }
+  .service-card:nth-child(2) { animation-delay: 0.08s; }
+  .service-card:nth-child(3) { animation-delay: 0.16s; }
+  .service-card:nth-child(4) { animation-delay: 0.24s; }
+  .service-card:nth-child(5) { animation-delay: 0.32s; }
+  .service-card:nth-child(6) { animation-delay: 0.4s; }
+  .service-card:nth-child(7) { animation-delay: 0.48s; }
+  .service-card:nth-child(8) { animation-delay: 0.56s; }
 
   .service-card {
     opacity: 0;
     position: relative;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .service-card::before {
@@ -50,8 +50,8 @@ const cardAnimationStyle = `
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
-    transition: left 0.6s;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.08), transparent);
+    transition: left 0.5s;
   }
 
   .service-card:hover::before {
@@ -59,14 +59,14 @@ const cardAnimationStyle = `
   }
 
   .service-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(99, 102, 241, 0.8) !important;
-    box-shadow: 0 0 50px rgba(99, 102, 241, 0.4), inset 0 0 30px rgba(99, 102, 241, 0.05) !important;
+    transform: translateY(-6px);
+    border-color: rgba(59, 130, 246, 0.6) !important;
+    box-shadow: 0 0 35px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.03) !important;
   }
 
   .service-tag {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(99, 102, 241, 0.1));
-    border: 1px solid rgba(99, 102, 241, 0.5);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(59, 130, 246, 0.08));
+    border: 1px solid rgba(59, 130, 246, 0.4);
   }
 `;
 
@@ -136,19 +136,19 @@ export default function ServicesSection() {
       
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-3" style={{
-          animation: "fadeInUpSlow 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both",
-        }}>Nos Services sur Mesure</h2>
+          animation: "fadeInUpSlow 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both",
+        }}>Solutions d&apos;IA et Automatisation</h2>
         <p className="text-white/70 max-w-3xl mx-auto text-lg" style={{
-          animation: "fadeInUpSlow 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both",
+          animation: "fadeInUpSlow 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both",
         }}>
-          Solutions d&apos;automatisation intelligente adaptées à vos besoins spécifiques. Nous analysons vos processus et créons des outils qui s&apos;intègrent parfaitement à votre façon de travailler.
+          Plateforme d&apos;IA avanc\u00e9e et automatisation intelligente. Optimisez vos processus m\u00e9tier avec des solutions sur mesure, des agents IA et de l&apos;apprentissage automatique.
         </p>
         <div className="flex items-center justify-center gap-4 mt-6 flex-wrap" style={{
-          animation: "fadeInUpSlow 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s both",
+          animation: "fadeInUpSlow 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both",
         }}>
-          <span className="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs text-white/70 hover:border-indigo-400/50 hover:bg-indigo-500/10 transition-all duration-300">👥 Accompagnement personnalisé</span>
-          <span className="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs text-white/70 hover:border-indigo-400/50 hover:bg-indigo-500/10 transition-all duration-300">⚙️ Sur mesure</span>
-          <span className="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs text-white/70 hover:border-indigo-400/50 hover:bg-indigo-500/10 transition-all duration-300">🚀 Clé en main</span>
+          <span className="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs text-white/70 hover:border-blue-400/40 hover:bg-blue-500/8 transition-all duration-300">\ud83e\udd16 Technologie Avanc\u00e9e</span>
+          <span className="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs text-white/70 hover:border-blue-400/40 hover:bg-blue-500/8 transition-all duration-300">\u2694\ufe0f Haute Performance</span>
+          <span className="px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs text-white/70 hover:border-blue-400/40 hover:bg-blue-500/8 transition-all duration-300">\ud83d\ude80 D\u00e9ploiement Rapide</span>
         </div>
       </div>
 
@@ -157,7 +157,7 @@ export default function ServicesSection() {
           {SERVICES.map((c, i) => (
             <div
               key={c.title}
-              className="service-card group rounded-2xl glass border border-white/10 p-6 hover:border-indigo-400/30 transition-all relative overflow-hidden magnetic hover:shadow-[0_0_40px_rgba(99,102,241,.2)]"
+              className="service-card group rounded-2xl glass border border-white/10 p-6 hover:border-blue-400/30 transition-all relative overflow-hidden magnetic hover:shadow-[0_0_30px_rgba(59,130,246,.15)]"
             >
               <div
                 onMouseMove={(e) => {

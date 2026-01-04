@@ -10,12 +10,12 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://flowpilot.ai"),
+  metadataBase: new URL("https://elyron.ai"),
   title: {
-    default: "FlowPilot AI — Automatisation IA & Workflows Intelligents | France",
-    template: "%s | FlowPilot AI"
+    default: "Elyron Labs — Solutions IA Intelligentes & Automatisation Avancée",
+    template: "%s | Elyron Labs"
   },
-  description: "Automatisation IA pour PME en France. Déployez des workflows intelligents, agents IA, et solutions d'automatisation sur mesure. Expert en IA appliquée pour votre croissance.",
+  description: "Elyron Labs - Solutions d'IA avancée et automatisation intelligente pour transformer vos processus métier. Expertise en apprentissage automatique, agents IA et optimisation.",
   keywords: [
     "automatisation IA France",
     "workflow automation",
@@ -42,18 +42,18 @@ export const metadata: Metadata = {
     },
   },
   alternates: { 
-    canonical: "https://flowpilot.ai",
+    canonical: "https://elyron.ai",
     languages: {
-      'fr-FR': 'https://flowpilot.ai/fr',
-      'en-US': 'https://flowpilot.ai/en',
+      'fr-FR': 'https://elyron.ai/fr',
+      'en-US': 'https://elyron.ai/en',
     },
   },
   category: "Technology",
   openGraph: {
-    title: "FlowPilot AI — Automatisation IA & Solutions Intelligentes",
-    description: "Agence d'automatisation IA pour PME. Workflows, agents IA, et solutions sur mesure pour transformer vos processus.",
-    url: "https://flowpilot.ai/",
-    siteName: "FlowPilot AI",
+    title: "Elyron Labs — Solutions IA Intelligentes",
+    description: "Plateforme d'IA avancée pour automatisation, optimisation de processus et solutions intelligentes.",
+    url: "https://elyron.ai/",
+    siteName: "Elyron Labs",
     images: [
       { 
         url: "/og.jpg", 
@@ -69,15 +69,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@flowpilotai",
-    creator: "@flowpilotai",
-    title: "FlowPilot AI — Solutions IA & Automatisation",
-    description: "Automatisation intelligente pour transformer vos processus métier.",
+    site: "@elyronlabs",
+    creator: "@elyronlabs",
+    title: "Elyron Labs — Solutions IA Avancée",
+    description: "Solutions d'IA avancée et automatisation intelligente pour votre entreprise.",
     images: ["/og.jpg"]
   },
-  creator: "FlowPilot AI",
-  authors: [{ name: "FlowPilot AI", url: "https://flowpilot.ai" }],
-  publisher: "FlowPilot AI",
+  creator: "Elyron Labs",
+  authors: [{ name: "Elyron Labs", url: "https://elyron.ai" }],
+  publisher: "Elyron Labs",
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "FlowPilot AI"
+    title: "Elyron Labs"
   },
   formatDetection: {
     telephone: true,

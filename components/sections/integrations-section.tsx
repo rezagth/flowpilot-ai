@@ -87,15 +87,15 @@ export default function IntegrationsSection() {
         }
 
         .integration-badge:hover {
-          transform: scale(1.15) translateY(-10px);
-          border-color: rgba(99, 102, 241, 0.95);
-          box-shadow: 0 0 60px rgba(99, 102, 241, 0.7), 0 20px 50px rgba(99, 102, 241, 0.5), inset 0 0 30px rgba(99, 102, 241, 0.1);
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(147, 51, 234, 0.2));
+          transform: scale(1.12) translateY(-8px);
+          border-color: rgba(59, 130, 246, 0.8);
+          box-shadow: 0 0 40px rgba(59, 130, 246, 0.5), 0 15px 35px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.08);
+          background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1));
         }
 
         .integration-badge:hover .integration-icon {
-          color: #a5b4fc;
-          filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.8));
+          color: #93c5fd;
+          filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.6));
         }
 
         .marquee-container {
@@ -117,7 +117,7 @@ export default function IntegrationsSection() {
       </div>
       
       <div className="marquee-container">
-        <div className="rounded-3xl glass border border-white/10 p-10 hover:border-indigo-400/50 transition-all duration-300">
+        <div className="rounded-3xl glass border border-white/10 p-10 hover:border-blue-400/40 transition-all duration-300">
           <Marquee speed={70} reverse={true}>
             {INTEGRATIONS.map((integration, idx) => {
               const IconComponent = integration.Icon;

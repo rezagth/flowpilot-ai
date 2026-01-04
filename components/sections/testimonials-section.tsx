@@ -12,18 +12,18 @@ function initials(name: string) {
 }
 
 const TESTIMONIALS = [
-  ["Marie, Gérante", "FlowPilot a automatiser notre facturation. On gagne 10h par semaine, c'est incroyable."],
-  ["Thomas, Directeur", "L'assistant IA répond à 80% des questions clients. Notre équipe respire enfin."],
-  ["Sophie, Comptable", "Plus de saisie manuelle ! L'OCR extrait tout automatiquement. Un vrai gain de temps."],
-  ["Lucas, Entrepreneur", "J'aurais dû le faire avant. ROI en 2 mois, je recommande à tous mes collègues."],
-  ["Emma, RH", "L'onboarding automatisé nous a fait gagner une semaine par nouvelle recrue."],
-  ["Pierre, Commercial", "Le CRM se remplit tout seul, je passe plus de temps à vendre qu'à saisir des données."],
-  ["Marie, Gérante", "FlowPilot a automatiser notre facturation. On gagne 10h par semaine, c'est incroyable."],
-  ["Thomas, Directeur", "L'assistant IA répond à 80% des questions clients. Notre équipe respire enfin."],
-  ["Sophie, Comptable", "Plus de saisie manuelle ! L'OCR extrait tout automatiquement. Un vrai gain de temps."],
-  ["Lucas, Entrepreneur", "J'aurais dû le faire avant. ROI en 2 mois, je recommande à tous mes collègues."],
-  ["Emma, RH", "L'onboarding automatisé nous a fait gagner une semaine par nouvelle recrue."],
-  ["Pierre, Commercial", "Le CRM se remplit tout seul, je passe plus de temps à vendre qu'à saisir des données."],
+  ["Marie, Gérante PME", "Elyron Labs a transformé notre processus comptable. Gain de 12h par semaine, c'est formidable."],
+  ["Thomas, Directeur Digital", "L'IA répond intelligemment à 85% des demandes clients. Notre support est surhumain maintenant."],
+  ["Sophie, Directrice Financière", "Plus de saisie manuelle ! L'extraction intelligente traite tout automatiquement. Gain énorme."],
+  ["Lucas, PDG Startup", "ROI exceptionnel en 6 semaines. Je recommande vivement à tous les entrepreneurs."],
+  ["Emma, RH Manager", "L'onboarding automatisé nous a fait gagner 2 semaines par recrue. Impressionnant."],
+  ["Pierre, VP Commercial", "Le CRM se remplit de manière intelligente, je consacre 100% du temps à la vente et à la croissance."],
+  ["Marie, Gérante PME", "Elyron Labs a transformé notre processus comptable. Gain de 12h par semaine, c'est formidable."],
+  ["Thomas, Directeur Digital", "L'IA répond intelligemment à 85% des demandes clients. Notre support est surhumain maintenant."],
+  ["Sophie, Directrice Financière", "Plus de saisie manuelle ! L'extraction intelligente traite tout automatiquement. Gain énorme."],
+  ["Lucas, PDG Startup", "ROI exceptionnel en 6 semaines. Je recommande vivement à tous les entrepreneurs."],
+  ["Emma, RH Manager", "L'onboarding automatisé nous a fait gagner 2 semaines par recrue. Impressionnant."],
+  ["Pierre, VP Commercial", "Le CRM se remplit de manière intelligente, je consacre 100% du temps à la vente et à la croissance."],
 ];
 
 export default function TestimonialsSection() {

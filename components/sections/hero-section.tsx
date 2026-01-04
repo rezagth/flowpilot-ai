@@ -30,37 +30,27 @@ export default function HeroSection() {
         @keyframes fadeInDownSlow {
           0% {
             opacity: 0;
-            transform: translateY(-80px);
-            filter: blur(20px);
-          }
-          15% {
-            opacity: 0;
-            transform: translateY(-65px);
-            filter: blur(17px);
-          }
-          30% {
-            opacity: 0.15;
             transform: translateY(-50px);
-            filter: blur(14px);
+            filter: blur(12px);
           }
-          45% {
-            opacity: 0.35;
-            transform: translateY(-35px);
+          20% {
+            opacity: 0;
+            transform: translateY(-40px);
             filter: blur(10px);
           }
-          60% {
-            opacity: 0.55;
-            transform: translateY(-20px);
-            filter: blur(7px);
+          40% {
+            opacity: 0.3;
+            transform: translateY(-30px);
+            filter: blur(8px);
           }
-          75% {
-            opacity: 0.75;
-            transform: translateY(-10px);
+          60% {
+            opacity: 0.7;
+            transform: translateY(-15px);
             filter: blur(4px);
           }
-          90% {
-            opacity: 0.92;
-            transform: translateY(-3px);
+          80% {
+            opacity: 0.9;
+            transform: translateY(-5px);
             filter: blur(1px);
           }
           100% {
@@ -166,10 +156,10 @@ export default function HeroSection() {
 
         @keyframes glow-pulse {
           0%, 100% {
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3), inset 0 0 20px rgba(99, 102, 241, 0.1);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.25), inset 0 0 15px rgba(59, 130, 246, 0.08);
           }
           50% {
-            box-shadow: 0 0 40px rgba(99, 102, 241, 0.6), inset 0 0 30px rgba(99, 102, 241, 0.2);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.4), inset 0 0 20px rgba(59, 130, 246, 0.15);
           }
         }
 
@@ -324,7 +314,7 @@ export default function HeroSection() {
         .btn-primary {
           position: relative;
           overflow: hidden;
-          transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .btn-primary::before {
@@ -343,8 +333,8 @@ export default function HeroSection() {
         }
 
         .btn-primary:hover {
-          transform: translateY(-4px) scale(1.02);
-          box-shadow: 0 0 50px rgba(99, 102, 241, 0.5), 0 20px 40px rgba(99, 102, 241, 0.3);
+          transform: translateY(-2px) scale(1.01);
+          box-shadow: 0 0 40px rgba(59, 130, 246, 0.4), 0 15px 30px rgba(59, 130, 246, 0.2);
         }
 
         .btn-primary:active {
@@ -353,7 +343,7 @@ export default function HeroSection() {
 
         .btn-ghost {
           position: relative;
-          transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           overflow: hidden;
         }
 
@@ -364,8 +354,8 @@ export default function HeroSection() {
           left: -100%;
           width: 100%;
           height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.8), transparent);
-          transition: left 0.8s;
+          background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.6), transparent);
+          transition: left 0.6s;
         }
 
         .btn-ghost:hover::after {
@@ -373,18 +363,18 @@ export default function HeroSection() {
         }
 
         .btn-ghost:hover {
-          transform: translateY(-4px) scale(1.02);
-          border-color: rgba(99, 102, 241, 0.8);
-          background: rgba(99, 102, 241, 0.15);
-          box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+          transform: translateY(-2px) scale(1.01);
+          border-color: rgba(59, 130, 246, 0.6);
+          background: rgba(59, 130, 246, 0.08);
+          box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
         }
 
         .stat-item {
           position: relative;
           padding: 8px;
           border-radius: 8px;
-          transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          animation: float 5s ease-in-out infinite;
+          transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          animation: float 4s ease-in-out infinite;
         }
 
         .stat-item:nth-child(1) {
@@ -392,21 +382,21 @@ export default function HeroSection() {
         }
 
         .stat-item:nth-child(2) {
-          animation-delay: 1s;
+          animation-delay: 0.8s;
         }
 
         .stat-item:nth-child(3) {
-          animation-delay: 2s;
+          animation-delay: 1.6s;
         }
 
         .stat-item::before {
           content: '';
           position: absolute;
           inset: 0;
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0), rgba(99, 102, 241, 0.1), rgba(99, 102, 241, 0));
+          background: linear-gradient(135deg, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0));
           border-radius: 8px;
           opacity: 0;
-          transition: opacity 0.6s;
+          transition: opacity 0.5s;
         }
 
         .stat-item:hover::before {
@@ -414,14 +404,14 @@ export default function HeroSection() {
         }
 
         .stat-item:hover {
-          transform: translateY(-8px) scale(1.08);
-          background: rgba(99, 102, 241, 0.05);
-          box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
+          transform: translateY(-4px) scale(1.04);
+          background: rgba(59, 130, 246, 0.04);
+          box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
         }
 
         .stat-number {
-          transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          animation: breathe 6s ease-in-out infinite;
+          transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          animation: breathe 5s ease-in-out infinite;
         }
 
         .stat-item:nth-child(1) .stat-number {
@@ -429,118 +419,118 @@ export default function HeroSection() {
         }
 
         .stat-item:nth-child(2) .stat-number {
-          animation-delay: 1s;
+          animation-delay: 0.8s;
         }
 
         .stat-item:nth-child(3) .stat-number {
-          animation-delay: 2s;
+          animation-delay: 1.6s;
         }
 
         .stat-item:hover .stat-number {
-          color: #a5b4fc;
-          transform: scale(1.15);
+          color: #60a5fa;
+          transform: scale(1.1);
         }
       `}</style>
 
       <div className="relative z-10 text-center py-0 md:py-1">
         <motion.div 
-          initial={{ opacity: 0, y: -60, filter: "blur(25px)" }}
+          initial={{ opacity: 0, y: -40, filter: "blur(15px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-          className="badge inline-flex items-center gap-2 glass-strong rounded-full px-4 py-2 text-xs md:text-sm text-white/90 border border-white/15 mb-4 md:mb-6 shadow-[0_0_20px_rgba(99,102,241,.15)] hover:shadow-[0_0_40px_rgba(99,102,241,.4)] transition-all duration-500"
+          transition={{ duration: 1.6, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.3 }}
+          className="badge inline-flex items-center gap-2 glass-strong rounded-full px-4 py-2 text-xs md:text-sm text-white/85 border border-blue-400/20 mb-4 md:mb-6 shadow-[0_0_15px_rgba(59,130,246,.1)] hover:shadow-[0_0_30px_rgba(59,130,246,.25)] transition-all duration-500"
         >
-          <span className="relative size-2 rounded-full bg-emerald-400 shadow-[0_0_12px_4px_rgba(52,211,153,.35)]">
-            <span className="absolute inset-0 bg-emerald-400 rounded-full animate-pulse opacity-60" />
+          <span className="relative size-2 rounded-full bg-blue-400 shadow-[0_0_10px_2px_rgba(96,165,250,.25)]">
+            <span className="absolute inset-0 bg-blue-400 rounded-full animate-pulse opacity-50" />
           </span>
-          <span className="font-medium">Agence d&apos;Automatisation IA pour PME</span>
-          <span className="hidden sm:inline text-white/50">•</span>
-          <span className="hidden sm:inline text-white/70">Sur Mesure</span>
+          <span className="font-medium">Elyron Labs - Solutions IA Avancée</span>
+          <span className="hidden sm:inline text-white/40">•</span>
+          <span className="hidden sm:inline text-white/60">Transformation Intelligente</span>
         </motion.div>
 
-        <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02] text-white">
+        <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] text-white">
           <motion.span
-            initial={{ opacity: 0, y: 80, filter: "blur(30px)", scale: 0.85 }}
+            initial={{ opacity: 0, y: 60, filter: "blur(20px)", scale: 0.92 }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)", scale: 1 }}
-            transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
+            transition={{ duration: 1.8, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.6 }}
             style={{ display: "inline-block" }}
           >
-            Gagnez du temps.
+            Transformez votre
           </motion.span>
           <br />
           <motion.span 
-            initial={{ opacity: 0, y: 80, filter: "blur(30px)", scale: 0.85 }}
+            initial={{ opacity: 0, y: 60, filter: "blur(20px)", scale: 0.92 }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)", scale: 1 }}
-            transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 1.3 }}
-            className="grad-text block mt-2"
+            transition={{ duration: 1.8, ease: [0.25, 0.46, 0.45, 0.94], delay: 1.1 }}
+            className="bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent block mt-2"
           >
-            Automatisez l&apos;essentiel.
+            Entreprise avec l&apos;IA
           </motion.span>
         </h1>
 
         <motion.div
-          initial={{ opacity: 0, y: 70, filter: "blur(25px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 2, ease: [0.16, 1, 0.3, 1], delay: 2 }}
-        >
-          <p className="hero-subtitle mt-3 md:mt-4 text-base md:text-lg text-white/75 max-w-3xl mx-auto leading-relaxed">
-            Nous transformons vos processus métier en systèmes intelligents et automatisés. Plus de temps perdu sur les tâches répétitives, plus d&apos;efficacité pour votre équipe.
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 60, filter: "blur(20px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1], delay: 2.8 }}
-        >
-          <p className="mt-2 md:mt-3 text-sm md:text-base text-white/80 font-semibold max-w-3xl mx-auto">
-            Solutions d&apos;automatisation IA sur mesure • Adaptées à votre métier • Implémentation rapide
-          </p>
-        </motion.div>
-
-        <motion.div
           initial={{ opacity: 0, y: 50, filter: "blur(18px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1.7, ease: [0.16, 1, 0.3, 1], delay: 3.5 }}
+          transition={{ duration: 1.6, ease: [0.25, 0.46, 0.45, 0.94], delay: 1.6 }}
         >
-          <p className="mt-3 md:mt-4 text-sm text-white/60 max-w-3xl mx-auto">
-            Déjà +150 PME accompagnées • Gain moyen de 15h/semaine par employé • ROI garanti en 3 mois
+          <p className="hero-subtitle mt-4 md:mt-5 text-base md:text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
+            Solutions d&apos;IA avancée et automatisation intelligente. Optimisez vos processus, réduisez les coûts, et accélérez votre croissance avec les technologies de demain.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40, filter: "blur(15px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 1.4, ease: [0.25, 0.46, 0.45, 0.94], delay: 2.1 }}
+        >
+          <p className="mt-3 md:mt-4 text-xs md:text-sm text-white/65 font-medium max-w-3xl mx-auto tracking-wide">
+            Plateforme de ML avancée • Intégration système • Support dédié
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 35, filter: "blur(12px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 1.3, ease: [0.25, 0.46, 0.45, 0.94], delay: 2.5 }}
+        >
+          <p className="mt-2 md:mt-3 text-xs md:text-sm text-white/55 max-w-3xl mx-auto">
+            Déployé dans des organisations Fortune 500 • Réduction de 40% des coûts opérationnels • Déploiement en 2-4 semaines
           </p>
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0, y: 60, filter: "blur(20px)" }}
+          initial={{ opacity: 0, y: 45, filter: "blur(15px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1], delay: 4.2 }}
+          transition={{ duration: 1.5, ease: [0.25, 0.46, 0.45, 0.94], delay: 3 }}
           className="mt-6 md:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link href="#cta" className="btn-primary magnetic shadow-[0_0_50px_rgba(99,102,241,.4)] px-8 py-3">
-            Audit Gratuit
+          <Link href="#cta" className="btn-primary magnetic shadow-[0_0_30px_rgba(59,130,246,.3)] px-8 py-3 hover:shadow-[0_0_45px_rgba(59,130,246,.5)]">
+            Commencer Gratuitement
           </Link>
           <Link href="#services" className="btn-ghost magnetic px-8 py-3">
-            Découvrir nos solutions
+            En savoir plus
           </Link>
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1], delay: 5 }}
+          transition={{ duration: 1.4, ease: [0.25, 0.46, 0.45, 0.94], delay: 3.5 }}
           className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto py-8 border-y border-white/10"
         >
           {[
-            { value: 150, suffix: "+", label: "Entreprises", decimals: 0 },
-            { value: 2.4, suffix: "M+", label: "Workflows", decimals: 1 },
-            { value: 15, suffix: "h+", label: "Gains/semaine", decimals: 0 },
+            { value: 500, suffix: "+", label: "Clients", decimals: 0 },
+            { value: 98, suffix: "%", label: "Satisfaction", decimals: 0 },
+            { value: 40, suffix: "%", label: "Économies", decimals: 0 },
           ].map((item, i) => (
             <motion.div 
               key={i} 
-              initial={{ opacity: 0, scale: 0.7, y: 30 }}
+              initial={{ opacity: 0, scale: 0.8, y: 25 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 5.4 + i * 0.25 }}
+              transition={{ duration: 1.3, ease: [0.25, 0.46, 0.45, 0.94], delay: 4 + i * 0.2 }}
               className="stat-item"
             >
               <div className="stat-number text-2xl md:text-3xl font-bold text-white mb-1">
-                <AnimatedNumber value={item.value} delay={5.4 + i * 0.25} decimals={item.decimals} />
+                <AnimatedNumber value={item.value} delay={4 + i * 0.2} decimals={item.decimals} />
                 {item.suffix}
               </div>
               <div className="text-xs md:text-sm text-white/60">{item.label}</div>
