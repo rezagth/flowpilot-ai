@@ -1,55 +1,116 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Button from "@/components/ui/button";
+import { Menu, X, Sparkles } from "lucide-react";
 import Link from "next/link";
-import ThemeToggle from "@/components/theme-toggle";
+
+const navItems = [
+  { label: "Solutions", href: "#features" },
+  { label: "Cas d'Usage", href: "#use-cases" },
+  { label: "Blog", href: "#blog" },
+  { label: "À Propos", href: "#about" }
+];
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-xl bg-black/30 transition-all duration-300">
-      <div className="container-tight">
-        <div className="flex items-center justify-between py-4 md:py-5">
-          {/* Left: Logo & Badge */}
-          <div className="flex items-center gap-6">
-            <Link href="#" className="flex items-center gap-2.5 group">
-              <div className="size-9 rounded-lg bg-gradient-to-br from-slate-900 via-blue-900 to-blue-700 shadow-[0_0_20px_rgba(30,58,138,.5)] flex items-center justify-center relative overflow-hidden group-hover:shadow-[0_0_30px_rgba(30,58,138,.7)] transition-all duration-300 border border-blue-500/20">
-                <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent" />
-                <svg width="20" height="20" viewBox="0 0 24 24" className="text-blue-300 relative z-10">
-                  <path fill="currentColor" d="M12 2c-5.33 4-8 6.5-8 11 0 4.41 3.59 8 8 8s8-3.59 8-8c0-4.5-2.67-7-8-11zm0 15c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
-                </svg>
-              </div>
-              <div className="flex flex-col hidden sm:flex">
-                <span className="font-bold tracking-tight text-white text-sm leading-none">Elyron</span>
-                <span className="font-semibold text-blue-400 text-xs leading-none">Labs</span>
-              </div>
-            </Link>
-
-            <div className="hidden xl:flex items-center gap-2.5 px-3.5 py-2 rounded-full border border-blue-500/30 bg-blue-500/5 hover:bg-blue-500/10 transition-colors duration-300 group">
-              <span className="relative size-2 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,.6)]">
-                <span className="absolute inset-0 rounded-full bg-blue-400/40 animate-pulse" />
-              </span>
-              <span className="text-xs text-blue-300 font-medium">Plateforme Active</span>
+    <motion.header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "glass-strong shadow-lg" : "bg-transparent"
+      }`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <nav className="container-tight py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Sparkles className="w-5 h-5 text-white" />
             </div>
-          </div>
-
-          {/* Right: Nav Links & Actions */}
-          <div className="flex items-center gap-1 md:gap-2">
-            <nav className="hidden md:flex items-center gap-1">
-              <Link href="#use-cases" className="px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
-                Use Cases
+            <span className="text-xl font-bold gradient-text">Elyrion Labs</span>
+          </Link>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            {navItems.map((item) => (
+              <Link 
+                key={item.href} 
+                href={item.href}
+                className="text-slate-300 hover:text-white transition-colors"
+              >
+                {item.label}
               </Link>
-              <Link href="#pricing" className="px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
-                Pricing
-              </Link>
-            </nav>
-
-            <Link href="#cta" className="hidden sm:flex btn-primary text-sm py-2.5 px-5 rounded-lg font-medium transition-all duration-300 hover:shadow-[0_0_30px_rgba(99,102,241,.3)]">
-              Get Started
-            </Link>
-
-            <ThemeToggle />
+            ))}
           </div>
+          
+          {/* Desktop CTA */}
+          <div className="hidden md:block">
+            <Button 
+              size="md"
+              onClick={() => window.open('https://cal.com/infracyb', '_blank')}
+            >
+              Réserver une Démo
+            </Button>
+          </div>
+          
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
         </div>
-      </div>
-    </header>
+        
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <motion.div 
+            className="md:hidden mt-4 pt-4 border-t border-white/10"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+          >
+            <div className="flex flex-col gap-4">
+              {navItems.map((item) => (
+                <Link 
+                  key={item.href} 
+                  href={item.href}
+                  className="text-slate-300 hover:text-white transition-colors py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Button 
+                className="w-full mt-2"
+                onClick={() => {
+                  window.open('https://cal.com/infracyb', '_blank');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                Réserver une Démo
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </nav>
+    </motion.header>
   );
 }
